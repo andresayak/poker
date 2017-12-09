@@ -1,0 +1,151 @@
+<div class="layout layout-home">
+    <div id="bg-layout-home"></div>
+    <div class="home-gradient"></div>
+    <div class='topPanel'>
+        <div class="container">
+            <div class="topLine1">
+                <div class='row'>
+                    <div class='col-xs-5'>
+                        <a class="logo"></a>
+                    </div>
+                    <div class='col-xs-2'>
+                        <div class="center-block center text-center">
+                            <span id="likeContainer"></span>
+                        </div>
+                    </div>
+                    <div class='col-xs-5'>
+                        <div class="topBtnsContainer">
+                            <a id="notificationBtn" data-toggle="tooltip" data-placement="bottom" title="Notifications" class='btn btn-sm btn-default'><i class="fa fa-envelope"></i><span class="count count-show">2</span></a>
+                            <a id="inviteFriends" data-toggle="tooltip" data-placement="bottom" title="Invites" class='btn btn-sm btn-default'><i class='fa fa-users'></i></a>
+                            <a id="trainingBtn" data-toggle="tooltip" data-placement="bottom" title="Training" class='btn btn-sm btn-default'><i class='fa fa-graduation-cap'></i></a>
+                            <a id="fullscreenBtn" data-toggle="tooltip" data-placement="bottom" title="Fullscreen" class='btn btn-sm btn-default'><i class="glyphicon glyphicon-fullscreen"></i></a>
+                            <a id="settingsBtn" data-toggle="tooltip" data-placement="bottom" title="Settings" class='btn btn-sm btn-default'><i class='fa fa-cogs'></i></a>
+                            <a id="helpBtn" data-toggle="tooltip" data-placement="bottom" title="Help" class='btn btn-sm btn-default'><i class="glyphicon glyphicon-question-sign"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="topLine2_container" class="container">
+            <div class="topLine2">
+                <div class='row'>
+                    <div class='col-xs-3 money-col'>
+                        <div class="money">
+                            <img src="/img/home/fishka.png" alt="fishka">
+                            <b>$<span id='chipsCount'><%=countChips%></span></b>
+                            <!-- <span id='promoOne'>1</span>
+                            <span id='promoTwo'>2</span>
+                            <span id='promoThree'>3</span>
+                            <span id='promoFour'>4</span>
+                            <span id='promoFive'>5</span> -->
+                        </div>
+                    </div>
+                    <div class='col-xs-2 dice-col'>
+                        <div id="diceButton" class="dice">
+                            <img src="/img/home/bones.png" alt="bones">
+                            <b><%=user.get('slot_attempt')%></b>
+                        </div>
+                    </div>
+                    <div class='col-xs-2'>
+                        <a id="buyBtn" class="btn m_btn btn-warning btn-m btn-2h"><b>Buy Chips</b></a>
+                    </div>
+                    <div class='col-xs-5 last-col'>
+                        <div class="levelbox">
+                            <div class="levelvalue text-center">
+                                <div>
+                                    <table>
+                                        <tbody>
+                                            <tr><td><b class="title">Level</b></td></tr>
+                                            <tr><td class="text-center"><b id="userLevelValue" class="value"><%=user.get('level')%></b></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="levelline">
+                                <span class="pull-right"><b id="userLevelDiff">0/0</b></span>
+                                <div class="title"><b id="userLevelTitle"><%=$.t('userlevel.level'+user.get('level'))%></b></div>
+                                <div class="expprogress">
+                                    <div class="line">
+                                        <div id="userLevelProgress" class="line-t" style="width:0%;border-radius:30px 0 0 30px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middleContent ">
+        <div class='container'>
+            <div id="chatContainer" class='chatContainer'></div>
+            <div class="container-desc" style='display: none;'>
+                <div class="container fix-scrollbar">
+                    <div class="inner-scroll">
+                        <div class="tablepokerConatiner">
+                            <div id='tablepoker'></div>
+                        </div>
+                    </div>
+                </div>
+                <div class='backContainer'>
+                    <a id="toLobbyBtn" class='btn m_btn btn-info btn-s'><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp; To Lobby</a>
+                    <a id="standUpBtn" class='btn m_btn btn-info btn-s' style="display:none;"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> &nbsp;Stand Up</a>
+                    <div class='roomName'>
+                        Room: #<span id="descRoomId"></span><br/>
+                        Blinds: <span id="descRoomBlindes"></span>
+                    </div>
+                </div>
+                <div class='playBtnsContainer' style="opacity:0;">
+                    <div class="buttons checkbox m_checkbox">
+                        <label data-toggle="tooltip" data-placement="top" title="Check or Fold">
+                            <span></span>
+                            <input id="btn-checkOrFold" type="checkbox"/>&thinsp;
+                        </label>
+                        <label data-toggle="tooltip" data-placement="top" title="Call All" data-container=".container-desc">
+                            <span></span>
+                            <input id="btn-callAll" type="checkbox"/>&thinsp;
+                        </label>
+                    </div>
+                    <div class="buttons">
+                        <a id="btn-call" style="display:none;" class='btn m_btn btn-success btn-m disabled'>Call to <span id='callValue'>0</span></a>
+                        <a id="btn-check" style="display:none;" class='btn m_btn btn-info btn-s disabled'>Check</a>
+                        <a id="btn-raise" style="display:none;" class="btn m_btn btn-success btn-s disabled" data-toggle="popover">Raise</a>
+                        <a id="btn-all-in" style="display:none;" class='btn m_btn btn-success btn-s'>All-in</a>
+                        <a id="btn-fold" class='btn m_btn btn-danger btn-s'>Fold</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-rooms fix-scrollbar">
+                <div class="inner-scroll">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-4">
+                            <div class='playBtnblock text-center'>
+                                <div>
+                                    <a id="playNowBtn" class="playNowBtn btn m_btn btn-b btn-2h btn-danger">Play texas hold'em NOW</a>
+                                </div>
+                            </div>
+                            <div class="contentPanel">
+                                <ul class="nav nav-tabs">
+                                    <li>
+                                        <a href="#tab-event" data-toggle="tab">Events</a>
+                                    </li>
+                                    <li class="active"><a href="#tab-holdem" data-toggle="tab">Hold'em</a></li>
+                                    <li><a href="#tab-shootout" data-toggle="tab">Shootout</a></li>
+                                    <li><a href="#tab-sitngo" data-toggle="tab">SIT N GO</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="tab-event">...Events</div>
+                                    <div class="tab-pane fade in active" id="tab-holdem">
+                                        <div id="game-poker-public-list" class="tableblock"> </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-shootout">...Shootout</div>
+                                    <div class="tab-pane fade" id="tab-sitngo">...SIT N GO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

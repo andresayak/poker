@@ -1,0 +1,64 @@
+<table border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td style="width:810px;margin:0;padding:15px 0;direction:ltr">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="font:13px/18px Arial,sans-serif">
+                                    <center style="text-align:left;max-width:560px;width:100%">
+                                        <?php echo $this->render('email/head.phtml')?>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-bottom:25px;border-bottom:1px solid #e5e5e5">
+                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                            <tbody><tr>
+                                                                    <td>
+                                                                        Your password: <?php echo $this->userRow->getPassword()?>
+                                                                        <br><br>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table cellpadding="0" cellspacing="0" align="left" style="direction:ltr;border-collapse:collapse">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table cellpadding="0" cellspacing="0" background="<?php echo $this->basePath('img/email/btn-grd.2.png')?>" bgcolor="#017ac2" style="border-collapse:collapse;background-repeat:repeat-x">
+                                                                            <tbody><tr>
+                                                                                    <td width="100%" height="5" background="<?php echo $this->basePath('img/email/btn-tl.2.png')?>" style="background-repeat:no-repeat;vertical-align:top;font-size:0;line-height:0"></td>
+                                                                                    <td width="5" height="5" background="<?php echo $this->basePath('img/email/btn-tr.2.png')?>" style="background:url(<?php echo $this->basePath('img/email/btn-tr.2.png')?>) no-repeat 100% 0;background-repeat:no-repeat;vertical-align:top;text-align:right;font-size:0;line-height:0"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td colspan="2" style="direction:ltr;text-align:center">
+                                                                                        <a href="<?php echo $this->basePath($this->url('signup_confirm', array('key' => $this->userRow->confirm_key, 'user_id' => $this->userRow->id)))?>" style="display:block;padding:6px 20px;border-left:1px solid #0063a0;border-right:1px solid #0063a0;text-decoration:none;color:#ffffff;font-weight:700;font-size:16px;line-height:20px" target="_blank">
+                                                                                        Confirm email
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="100%" height="5" background="<?php echo $this->basePath('img/email/btn-bc.2.png')?>" style="background-repeat:repeat-x;vertical-align:bottom;text-align:left;font-size:0;line-height:0"><img src="<?php echo $this->basePath('img/email/btn-bl.2.png')?>" alt="" width="5" height="5" border="0"></td>
+                                                                                    <td width="5" height="5" background="<?php echo $this->basePath('img/email/btn-bc.2.png')?>" style="background-repeat:repeat-x;vertical-align:bottom;text-align:right;font-size:0;line-height:0"><img src="<?php echo $this->basePath('img/email/btn-br.2.png')?>" alt="" width="5" height="5" border="0"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </center>
+                                    <br>
+                                    <?php echo $this->render('email/footer.phtml')?>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

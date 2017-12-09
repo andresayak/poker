@@ -1,0 +1,41 @@
+. {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.-btn-warning-b {
+    width: 170px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.-btn-warning-b_2h {
+    width: 170px;
+    height: 45px;
+    background-position: -5px -45px;
+}
+
+.-btn-warning-m {
+    width: 135px;
+    height: 30px;
+    background-position: -5px -100px;
+}
+
+.-btn-warning-m_2h {
+    width: 135px;
+    height: 45px;
+    background-position: -5px -140px;
+}
+
+.-btn-warning-s {
+    width: 100px;
+    height: 30px;
+    background-position: -185px -5px;
+}
+
+.-btn-warning-s_2h {
+    width: 100px;
+    height: 45px;
+    background-position: -185px -45px;
+}

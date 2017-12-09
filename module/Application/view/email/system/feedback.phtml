@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title><?php echo $this->servername?></title>
+        <?php echo $this->render('email/style.phtml')?>
+    </head>
+    <body bgcolor="#FFFFFF">
+        <?php echo $this->render('email/head.phtml')?>
+        <!-- BODY -->
+        <table class="body-wrap" style="width: 100%;">
+            <tr>
+                <td></td>
+                <td class="container" bgcolor="#FFFFFF">
+                    <div style="padding: 15px; max-width: 600px; margin: 0 auto; display: block;">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3 style="font-weight: 500;font-size: 27px;">Hi, Elijah Baily</h3>
+                                    <p style="font-size: 17px; text-align: justify;">Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
+                                    <p style="margin-bottom: 10px; font-weight: normal; font-size: 14px; line-height: 1.6;text-align: justify;">Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
+                                    <!-- Callout Panel -->
+                                    <p style="padding: 15px; background-color: #ECF8FF; margin-bottom: 15px; text-align: justify;">
+                                        Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#" style="color: #2BA6CB;">Click it! &raquo;</a>
+                                    </p>
+                                    <!-- /Callout Panel -->					
+                                    <!-- social & contact -->
+                                    <table class="social" width="100%" style="background-color: #ebebeb;">
+                                        <tr>
+                                            <td>
+                                                <!-- column 1 -->
+                                                <table align="left" class="column" style="width: 280px; min-width: 279px; float: left;">
+                                                    <tr>
+                                                        <td style="padding: 15px;">				
+                                                            <h5 style="font-weight: 900;font-size: 17px;">Connect with Us:</h5>
+                                                            <p class="">
+                                                                <a href="#" style="padding: 3px 7px; font-size: 12px;margin-bottom: 10px;
+    text-decoration: none; color: #FFF; font-weight: bold; display: block; text-align: center; background-color: #3B5998!important;">Facebook</a> 
+                                                                <a href="#" style="padding: 3px 7px; font-size: 12px;margin-bottom: 10px;
+    text-decoration: none; color: #FFF; font-weight: bold; display: block; text-align: center; background-color: #1daced!important;">Twitter</a> 
+                                                                <a href="#" style="padding: 3px 7px; font-size: 12px;margin-bottom: 10px;
+    text-decoration: none; color: #FFF; font-weight: bold; display: block; text-align: center; background-color: #DB4A39!important;">Google+</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- /column 1 -->	
+                                                <!-- column 2 -->
+                                                <table align="left" class="column" style="width: 280px; min-width: 279px; float: left;">
+                                                    <tr>
+                                                        <td style="padding: 15px;">				
+                                                            <h5 style="font-weight: 900;font-size: 17px;">Contact Info:</h5>												
+                                                            <p>Phone: <strong>408.341.0600</strong><br/>
+                                                                Email: <strong><a style="color: #2BA6CB;" href="emailto:hseldon@trantor.com">hseldon@trantor.com</a></strong></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- /column 2 -->
+                                                <span class="clear" style="display: block;clear: both;"></span>	
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- /social & contact -->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- /content -->
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- /BODY -->
+        <?php echo $this->render('email/footer.phtml')?>
+    </body>
+</html>

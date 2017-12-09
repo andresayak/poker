@@ -1,0 +1,62 @@
+<div class="row">
+    <div id="chats-mini" class="chats chat-block-mini active col-xs-4 col-sm-4 col-lg-3">
+        <div class='inner '>
+            <a class='chatIcon btn btn-link' data-toggle="tooltip" data-placement="top" title="Open chat">
+                <i class="fa fa-comments-o" aria-hidden="true"></i>
+                <span class="countNoRead">0</span>
+            </a>
+            <div class='chat-list active fix-scrollbar'>
+                <div class="scroll inner-scroll">
+                    <% chatsManager.getLastMessages(100, function(model){%>
+                    <div class='item item-type-<%= model.get('type')%><%= (model.get('user_id') == user.get('id'))?' item-my':''%>'>
+                        <div class='innerItem'>
+                            <span class='time'><%= _.template.date(model.get('time_send'), 'min')%></span>
+                            <span class='username'><a class='username' target="_blank" href="<%= model.get('social_link')%>"><%= _.template.escapeHtml(model.get('social_name'))%></a></span>
+                            <span class='message'><%= escapeMessage(model.get('message'))%></span>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chats-max" class="chats chats-block col-xs-4 col-sm-4 col-lg-3" style="display: none;">
+        <div class='inner'>
+            <ul class='tabs'>
+                <li data-type="public" class='active'><a>All <span id="chat-tab-public-count" class="countNoRead">0</span></a></li>
+                <li id="chatRoomTab" data-type="room" style="display: none"><a>Room #<span style="display: none" id="chatRoomId"></span> <span id="chat-tab-room-count" class="countNoRead">0</span></a></li>
+                <li data-type="system"><a>System <span id="chat-tab-system-count" class="countNoRead">0</span></a></li>
+            </ul>
+            <div class='chatControlls'>
+                <div class='pull-right'>
+                    <a class='btn bn-close'><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class='inner'>
+                <div class='messageContainer'>
+                    <% for(var type in chatsManager.messages){%>
+                    <div data-type='<%=type%>' class='chat-list chat-list-<%=type%><%=(type == "public")?" active":""%> fix-scrollbar'>
+                        <div class='scroll inner-scroll'>
+                            <% chatsManager.messages[type].each(function(model){%>
+                            <div class='item item-type-<%= type%><%= (model.get('user_id') == user.get('id'))?' item-my':''%>'>
+                                <div class='innerItem'>
+                                    <span class='time'><%= _.template.date(model.get('time_send'), 'min')%></span>
+                                    <span data-user_id='<%= model.get('user_id')%>'><a class='username' target="_blank" href="<%= model.get('social_link')%>"><%= _.template.escapeHtml(model.get('social_name'))%></a></span>
+                                    <span class='message'><%= _.template.escapeHtml(model.get('message'))%></span>
+                                </div>
+                            </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <% }; %>
+                </div>
+                <div class='inputLine'>
+                    <div class="inputLineInner">
+                        <a tabindex="0" class="smileIcon btn"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
+                        <input name="message" class="form-control" autocomplete="off"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

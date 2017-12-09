@@ -1,0 +1,32 @@
+<?php if ($this->pageCount): ?>
+<?php $query = (isset($this->query))?$this->query:array()?>
+<?php $params = (isset($this->params))?$this->params:array()?>
+    <div class="pagination pagination-mini">
+        <ul>
+        <?php if (isset($this->previous)): ?>
+            <li><a href="<?php echo $this->url($this->route, $params, array('query' => $query+array('p' => $this->previous))); ?>">
+                < 
+            </a></li>
+        <?php else: ?>
+            <li class="disabled"><span>< </span></li>
+        <?php endif; ?>
+        <?php foreach ($this->pagesInRange as $page): ?>
+            <?php if ($page == $this->current): ?>
+            <li class="active"><a href="<?php echo $this->url($this->route, $params, array('query' => $query+array('p' => $page))); ?>">
+                <?php echo $page; ?>
+            </a></li>
+            <?php else: ?>
+            <li><a href="<?php echo $this->url($this->route, $params, array('query' => $query+array('p' => $page))); ?>">
+                <?php echo $page; ?></a></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        <?php if (isset($this->next)): ?>
+            <li><a href="<?php echo $this->url($this->route, $params, array('query' => $query+array('p' => $this->next))); ?>">
+                 >
+            </a></li>
+        <?php else: ?>
+            <li class="disabled"><span> ></span></li>
+        <?php endif; ?>
+        </ul>
+    </div>
+<?php endif; ?>

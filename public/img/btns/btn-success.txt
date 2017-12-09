@@ -1,0 +1,41 @@
+. {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.-btn-sucess-b {
+    width: 170px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.-btn-sucess-b_2h {
+    width: 170px;
+    height: 45px;
+    background-position: -5px -45px;
+}
+
+.-btn-sucess-m {
+    width: 135px;
+    height: 30px;
+    background-position: -5px -100px;
+}
+
+.-btn-sucess-m_2h {
+    width: 135px;
+    height: 45px;
+    background-position: -5px -140px;
+}
+
+.-btn-sucess-s {
+    width: 100px;
+    height: 30px;
+    background-position: -185px -5px;
+}
+
+.-btn-sucess-s_2h {
+    width: 100px;
+    height: 45px;
+    background-position: -185px -45px;
+}

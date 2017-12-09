@@ -1,0 +1,53 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-chip-1 {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -5px;
+}
+
+.sprite-chip-10 {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -5px;
+}
+
+.sprite-chip-100 {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -85px;
+}
+
+.sprite-chip-2 {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -85px;
+}
+
+.sprite-chip-200 {
+    width: 70px;
+    height: 70px;
+    background-position: -165px -5px;
+}
+
+.sprite-chip-5 {
+    width: 70px;
+    height: 70px;
+    background-position: -165px -85px;
+}
+
+.sprite-chip-50 {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -165px;
+}
+
+.sprite-chip-500 {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -165px;
+}

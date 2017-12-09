@@ -1,0 +1,16 @@
+<?php echo $this->doctype(); ?>
+<?php $v = APP_VERSION?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle(SITE_NAME)->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css?<?php echo $v?>" />
+        <base href="<?php echo $this->basePath('/')?>"/>
+    </head>
+    <body data-time="<?php echo time()?>">
+            <div class="container">
+                <?php echo $this->content ?>
+            </div>
+    </body>
+</html>

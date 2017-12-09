@@ -1,0 +1,31 @@
+{
+    "index": {
+        "Language": "Language"
+    },
+    "shop": {
+        "offert": {
+            "item_1": "$ 500 000",
+            "item_2": "$ 2 500 000"
+        },
+        "promo": {
+            "offer_expires": "Offer expires in",
+            "buy_now": "Buy now",
+            "welcome_bonus": "Welcome bonus",
+            "act_now": "Act now for more chips",
+            "get_x_more_chips": "Get %s% More Chips",
+            "hi_x_you_have_x_hours_to_make_x": "Hi %s, you have %s hours to make %s"
+        }
+    },
+    "poker": {
+        "sit": "Sit",
+        "pls_wait_nxt_hand": "Please wait for the next hand"
+    },
+    "time": {
+        "Y": "Y",
+        "M": "M",
+        "d": "d",
+        "h": "h",
+        "m": "m",
+        "s": "s"
+    }
+}

@@ -1,0 +1,179 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-dialog-training">
+        <div class="modal-content" id="sizeTraining">
+            <div class="modal-body">
+                <div id="stageCanvas"></div>
+                <div id="infoTrainingText" class="info-text-training">
+                    <h4>It's three-handed GlobalAmusePoker</h4>
+                    <p>
+                        Just like the hole-cams on TV, you know everyone's hand! Poker Genius lets you test your skill by choosing which pair of hole cards are the statistical favorite to win the hand as the action moves toward the River. Learn about outs and poker probabilities in a fun way, while earining chips for you to use at the poker table.
+                    </p>
+                    <img src="../img/card.jpg">
+                    <p>
+                        After making your choice, Poke Genius displays the percentage change of winning for all cards. Get it right and win $100 chips. Even wrong answers win chips equal to the percentage chance of that hand winning.
+                    </p>
+                    <h4>Outs</h4>
+                    <p>
+                        Any card left in the deck that, if drawn, will improve a player's hand to one that is likely to win.
+                    </p>
+                    <h4>Odds</h4>
+                    <p>
+                        The probability of many events in poker can be determined by direct calculation. In Poker Genius, the percentage shown under a pair of hole cards is the probability (with cards to come) that those cards will win when the action reaches a showdown.
+                    </p>
+                </div>
+                <div id="infoTraining" class="info-training"><img src="../img/info.png"></div>
+                <div id="whichHand" class="which-hand">Which hand is most likely to win?</div>
+                <div class="button-training">
+                    <button id="trainingButtonA" type="button" class="btn btn-success">A</button>
+                    <button id="trainingButtonB" type="button" class="btn btn-success">B</button>
+                    <button id="trainingButtonC" type="button" class="btn btn-success">C</button>
+                </div>
+                <div id="winUpTo" class="win-up-to">Win up to $1,200!</div>
+                <div class="checkbox share-training">
+                    <label>
+                        <input type="checkbox"> Share answer
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+.modal-dialog-training {
+    width: 500px;
+    height: 547px;
+}
+.modal-dialog-training .modal-body {
+    padding: 0;
+    background: #213647;
+}
+.modal-dialog-training .modal-content {
+    border: 0;
+    border-radius: 0;
+}
+
+#sizeTraining {
+    width: 500px;
+    height: 547px;
+}
+
+.modal-dialog-training .win-up-to:before {
+    width: 38px;
+    height: 39px;
+    content: "\00A0";
+    background: url('../img/home/fishka-s.png') no-repeat;
+    position: absolute;
+    left: -41px;
+    bottom: -6px;
+}
+.modal-dialog-training .win-up-to {
+    position: absolute;
+    bottom: 5%;
+    left: 13%;
+    color: white;
+    text-shadow: 1px -1px 7px #FFFDFD, 0 0 1em #BDAC9B;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.modal-dialog-training .share-training {
+    position: absolute;
+    bottom: 5%;
+    right: 6%;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 0 2px 0;
+}
+.modal-dialog-training .share-training input[type="checkbox"]{
+    margin: 2px 0 0;
+    margin-left: -17px;
+}
+.modal-dialog-training .which-hand {
+    position: absolute;
+    display: none;
+    bottom: 54%;
+    left: 13%;
+    color: white;
+    text-shadow: 1px -4px 7px #E26464, 0 0 1em #c45f02;
+    font-size: 25px;
+}
+.modal-dialog-training .info-training {
+    position: absolute;
+    bottom: 58%;
+    right: 3%;
+    color: #429BBF;
+    font-size: 25px;
+}
+.modal-dialog-training .info-training img {
+    width: 28px;
+    height: 28px;
+}
+.modal-dialog-training .info-training:hover {
+    color: #3584A5;
+}
+.modal-dialog-training .info-text-training {
+    position: absolute;
+    display: none;
+    top: 3.3%;
+    right: 10%;
+    background: #ddeaf5;
+    padding: 0 14px;
+    border-radius: 4px;
+    border: 2px solid #88b7d5;
+    width: 424px;
+    height: 513px;
+    z-index: 1;
+}
+.info-text-training:after, .info-text-training:before {
+    left: 100%;
+    top: 38%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.info-text-training:after {
+    border-color: rgba(221, 234, 245, 0);
+    border-left-color: #ddeaf5;
+    border-width: 5px;
+    margin-top: -5px;
+}
+.info-text-training:before {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: #88b7d5;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.modal-dialog-training .info-text-training h4 {
+    color: #337A9E;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.modal-dialog-training .info-text-training p {
+    color: #444;
+    text-align: justify;
+    line-height: 1.2
+}
+
+
+
+
+
+.button-training {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
+
+.button-training button {
+    font-weight: bold;
+    width: 118px;
+    margin: 0 14px;
+}
+
+</style>
+

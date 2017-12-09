@@ -1,0 +1,12 @@
+<?php if(count($this->messages)): ?>
+<?php foreach ($this->messages as $style=>$messages): ?>
+<?php if(count($messages)):?>
+<div class="alert alert-<?php echo $style ?>">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <?php foreach ($messages as $message): ?>
+    <div><?php echo $message ?></div>
+    <?php endforeach ?>
+</div>
+<?php endif ?>
+<?php endforeach ?>
+<?php endif ?>

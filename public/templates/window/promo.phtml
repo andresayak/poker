@@ -1,0 +1,26 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-dialog-promo modal-dialog-promo1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="content-header">
+                    <h4><%=tr.t('shop.promo.welcome_bonus')%></h4>
+                    <h2><%=tr.tsprintf('shop.promo.get_x_more_chips', promo.get('discount'))%>!</h2>
+                    <p><%=tr.tsprintf('shop.promo.hi_x_you_have_x_hours_to_make_x', userName, '24', count)%>.</p>
+                    <p><%=tr.t('shop.promo.act_now')%>!</p>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" noselect></button>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <h2><%=promo.get('title')%></h2>
+                    <p><del>$ <%=parseFloat(promo.get('price_old'))%></del></p>
+                    <button type="button" class="btn btn-success buy-now text-uppercase" data-id="<%=promo.get('id')%>">$ <%=parseFloat(promo.get('price'))%> <%=tr.t('shop.promo.buy_now')%>!</button>
+                </div>
+                <div class="time">
+                    <p><%=tr.t('shop.promo.offer_expires')%></p>
+                    <span class="label label-info fade">00:00:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

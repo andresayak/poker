@@ -1,0 +1,48 @@
+<table border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td style="width:810px;margin:0;padding:15px 0;direction:ltr">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="font:13px/18px Arial,sans-serif">
+                                    <center style="text-align:left;max-width:560px;width:100%">
+                                        <?php echo $this->render('email/head.phtml')?>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-bottom:25px;border-bottom:1px solid #e5e5e5">
+                                                        <table cellpadding="0" cellspacing="0" align="left" style="direction:ltr;border-collapse:collapse">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table cellpadding="0" cellspacing="0" bgcolor="#017ac2" style="border-collapse:collapse;background-repeat:repeat-x">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td colspan="2" style="direction:ltr;text-align:center">
+                                                                                        <a href="<?php echo $this->basePath($this->url('forgot_newpass', array('key' => $this->userRow->forgot_key, 'user_id' => $this->userRow->id)))?>" style="display:block;padding:6px 20px;border-left:1px solid #0063a0;border-right:1px solid #0063a0;text-decoration:none;color:#ffffff;font-weight:700;font-size:16px;line-height:20px" target="_blank">
+                                                                                        Set new password
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </center>
+                                    <br>
+                                    <?php echo $this->render('email/footer.phtml')?>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

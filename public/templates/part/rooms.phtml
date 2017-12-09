@@ -1,0 +1,67 @@
+<div class="tableblock-header">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col1">
+                    Room
+                </th>
+                <th class="col2">
+                    Blindes
+                </th>
+                <th class="col3">
+                    Min/Max BuyIn
+                </th>
+                <th class="col4">
+                    Max player
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="tableblock-body fix-scrollbar">
+    <div class="inner-scroll">
+        <table class="table">
+            <tbody>
+                <% _.each(list, function(item){%>
+                    <% if (item.players <= 0) { %>
+                        <tr data-id="<%=item.id%>" class="empty">
+                    <% } else if (item.players == item.max_players) { %>
+                        <tr data-id="<%=item.id%>" class="full">
+                    <% } else { %>
+                        <tr data-id="<%=item.id%>">
+                    <% } %>
+                        <td class="col1">
+                            <%=item.id%>
+                        </td>
+                        <td class="col2">
+                            <%=item.blind%> / <%=item.blind*2%>
+                        </td>
+                        <td class="col3">
+                            20M / 40M
+                        </td>
+                        <td class="col4">
+                            <%=item.players%>/<%=item.max_players%>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="tableblock-footer">
+    <div id="table-footer-btns" class="pull-right">
+        <a id="refreshRoomsBtn" class="btn m_btn btn-info btn-s">Refresh</a>
+        <a id="enterRoomBtn" class="btn m_btn btn-success btn-s disabled">Join</a>
+    </div>
+    <div class="checkbox m_checkbox">
+        Hide tables:
+        <label>
+            <span></span>
+            <input id="btn-empty" type="checkbox"/> - Empty
+        </label>
+        <label>
+            <span></span>
+            <input id="btn-full" type="checkbox"/> - Full
+        </label>
+    </div>
+</div>

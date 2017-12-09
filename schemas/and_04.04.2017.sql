@@ -1,0 +1,1 @@
+ALTER TABLE `user` ADD `slot_time_update` INT(11) NULL DEFAULT NULL AFTER `newsletter_time_send`, ADD `slot_rate` TINYINT(1) NULL DEFAULT '0' AFTER `slot_time_update`, ADD `slot_attempt` INT(11) NULL DEFAULT NULL AFTER `slot_rate`;

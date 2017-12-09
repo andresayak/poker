@@ -1,0 +1,28 @@
+<div class="modal fade only_content">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="back close" data-dismiss="modal" aria-label="Back"></button>-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-inner">
+                    <div class="scarf_title text-center"><b>Join</b></div>
+                    <div class="joinchips">
+                        <label for="joinchips">Your Bankroll:</label>
+                        <input id="current" type="text" name="joinchips" class="m_input form-control text-right" value="<%=user.getObjectCount('chip')%>" data-code="chip" data-max="<%=user.getObjectCount('chip')%>">
+                        <span>/ <%=user.getObjectCount('chip')%></span>
+                        <div class="expprogress center-block">
+                            <div class="line" data-code="chip" data-max="<%=user.getObjectCount('chip')%>">
+                                <div class="line-t" style="width:100%;"></div>
+                                <div class="line-btn" style="left:320px;"></div>
+                            </div>
+                        </div>
+                        <br>
+                        <a id="joinBtn" class='btn m_btn btn-warning btn-s center-block'><b>Join</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

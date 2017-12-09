@@ -1,0 +1,16 @@
+{
+    "index":{
+        "Language": "Language"
+    },
+    "game": {
+        "Start_game": "Start game",
+        "Leave": "Leave game [%s]",
+        "Round_end": "Round end, bank: %s",
+        "Join": "Join to game (chips: %s)",
+        "Have_ranking": "Have ranking %s and win %s chips",
+        "Call": "Call to %s",
+        "Raise": "Raise to %s",
+        "Fold": "Fold",
+        "Check": "Check"
+    }
+}

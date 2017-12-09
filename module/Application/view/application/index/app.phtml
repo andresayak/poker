@@ -1,0 +1,46 @@
+<?php $v = APP_VERSION; ?>
+<script>
+    var appOptions = <?php echo json_encode($appOptions); ?>;
+</script>
+<?php if (JSBUILD): ?>
+    <script src="/js/lib/require.js?<?php echo $v ?>"></script>
+    <script>
+        require.config({
+            urlArgs: 'v=' + VER,
+            paths: {
+                'config/local': 'js/app/config/local',
+                "app": "js/build/main"
+            },
+            waitSeconds: 15
+        });
+        require(["app"]);
+    </script>
+<?php else: ?>
+    <script data-main="/js/app/main.js?<?php echo $v ?>" src="/js/lib/require.js?<?php echo $v ?>"></script>
+<?php endif ?>
+<div id="app">
+    <div class="layout layout-screencompany"></div>
+    <div class="footer">
+        <div class="container">
+            <ul>
+                <li><a href="http://globalamuse.com/">GlobalAmuse website</a></li>
+            </ul>
+            <p>2016 GlobalAmuse Inc. All Rights Reserved.</p>
+        </div>
+    </div>
+    <?php if ($appOptions['auth'] == 'fb'): ?>
+        <div id="fb-root"></div>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=<?php echo $appOptions['app_id'] ?>";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div id="FbLike" class="fb-like" data-href="<?php echo $appOptions['app_url'] ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    <?php endif; ?>
+</div>

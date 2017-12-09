@@ -1,0 +1,232 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-dialog-invite">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" noselect></button>
+                <div class="content-header">
+                    <h2>Invite friends</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="search">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" id="searchInput">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search" id="searchButton"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="body-content" id="nameUser">
+<!--                     <ul id="userList">
+                    
+                    </ul> -->
+                    <!-- <ul id="userList"> -->
+                        <div class="row">
+                            <div id="userCol0" class="col-sm-6">
+<!--                                 <div class="user-box">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                <input type="checkbox">
+                                                <span></span>
+                                            </td>
+                                            <td>
+                                                 <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c17.0.50.50/p50x50/1459700_615172405219883_175790294_n.jpg?oh=65f32cec237d62472565968541881b70&oe=57DAD0EF" class="img-rounded" width="50" height="50">
+                                            </td>
+                                            <td>Nazar Moroz</td>
+                                        </tr>
+                                    </table>
+
+                                    </label>
+                                </div>
+ -->                            
+                            </div>
+                            <div id="userCol1" class="col-sm-6">
+<!--                                 <div class="user-box">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span></span>
+                                        <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/12512360_190617051307433_3539109249799733460_n.jpg?oh=c10017b56278c0876452b00df4e4a026&oe=57E0BC86" class="img-rounded" width="50" height="50">
+                                        Lybov Hurak
+                                    </label>
+                                </div>
+ -->                            </div>
+                        </div>
+                    <!-- </ul> -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="left">
+                <button id="selectAllInvite" type="button" class="btn btn-primary btn-md">Select all</button>
+<!--                     <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> <b>Select all</b>
+                        </label>
+                    </div>
+ -->                </div>
+                <button id="sendRequestInvite" type="button" class="btn btn-success by-now" disabled>Invite</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+.modal-dialog-invite .modal-content .modal-header .content-header h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    /*margin-top: 10px;*/
+    color: #9ACD32;
+    text-shadow: 1px -4px 7px black, 0 0 1em yellow;
+}
+
+.modal-dialog-invite .modal-content {
+    background: #79A587;
+}
+.modal-dialog-invite .modal-content .modal-header {
+    background: 0;
+    padding-left: 40px;
+    border-bottom: 1px solid white;
+}
+.modal-dialog-invite .modal-content .modal-footer {
+    border-top: 1px solid white;
+    text-align: left;
+}
+.modal-dialog-invite .modal-content .modal-body .body-content {
+    height: 270px;
+    margin: 0 15px;
+    /*background: green;*/
+    /*padding-left: 40px;*/
+}
+.modal-dialog-invite .modal-content .modal-body .body-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.modal-dialog-invite .modal-content .modal-body .body-content::-webkit-scrollbar {
+    width: 0 !important;
+}
+.modal-dialog-invite .modal-content .modal-body .body-content {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+.modal-dialog-invite .modal-content .modal-body .body-content img {
+    border: 4px solid #d2fcfc;
+    margin: 0 7px 0 36px;
+}
+.modal-dialog-invite .modal-body input[type="checkbox"] {
+    display: none;
+}
+.modal-dialog-invite .modal-body input[type="checkbox"]:checked + span {
+    border: 0;
+    border-radius: 0;
+    width: 40px;
+    left: -5px;
+    top: -15px;
+    height: 53px;
+    background: url('../img/test.png') 100% 100% no-repeat;
+}
+.modal-dialog-invite label {
+    margin-bottom: 0;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.modal-dialog-invite .modal-body label > span{
+    position: absolute;
+    top: 50%;
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #386D38;
+    cursor: pointer;
+    background: rgb(207, 253, 253);
+    border-radius: 5px;
+}
+.modal-dialog-invite .modal-content .modal-body .body-content .user-box {
+    position: relative;
+    border-radius: 19px;
+    padding: 10px 15px;
+    border: 0.3px solid #d4e7e7;
+    background: #adeeee;
+    height: 77px;
+    margin: 10px 0;
+    box-shadow: 1px 2px 6px -2px #F2DBDB;
+    /*white-space: nowrap;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.modal-dialog-invite .parent-scroll {
+    overflow: hidden;
+}
+.modal-dialog-invite .fix-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-bottom: -19px;
+}
+.modal-dialog-invite .fix-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-bottom: -19px;
+}
+.modal-dialog-invite .user-name {
+    position: absolute;
+    display: inline-block;
+    left: 95px;
+    top: 9px;
+    line-height: 17px;
+}
+
+
+
+
+.modal-dialog-invite table {
+    vertical-align: middle;
+}
+
+
+
+
+/*.modal-dialog-invite .modal-content .modal-body .body-content .user-box::-webkit-scrollbar {
+    display: none; 
+}
+.modal-dialog-invite .modal-content .modal-body .body-content .user-box {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}*/
+
+
+
+/*.modal-dialog-invite .modal-content .modal-body .body-content ul {
+    list-style: none;
+}
+.modal-dialog-invite .modal-content .modal-body .body-content ul li {
+    padding: 5px 0;
+}*/
+.modal-dialog-invite .modal-content .modal-body .body-content ul li label input{
+    margin-right: 10px;
+}
+.modal-dialog-invite .modal-content .modal-footer button {
+    float: right;
+}
+.modal-dialog-invite .modal-content .modal-footer button#sendRequestInvite:disabled {
+    background: gray;
+}
+.modal-dialog-invite .modal-content .modal-footer .left {
+    display: inline-block;
+}
+.modal-dialog-invite .search form {
+    text-align: center;
+}
+.modal-dialog-invite .search {
+    /*border-top: 1px dotted white;*/
+    border-bottom: 1px dotted white;
+}
+.modal-dialog-invite .search form .input-group input {
+    width: 332px;
+}
+</style>
